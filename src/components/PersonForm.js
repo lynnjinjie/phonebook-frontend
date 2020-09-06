@@ -37,7 +37,7 @@ const PersonForm = ({ persons, setPersons, setErrorMessage }) => {
     }
     const personObj = { name: newName, number: newNumber }
     personServices.create(personObj).then((res) => {
-      setPersons(res)
+      setPersons(persons.concat(res))
       setNewName('')
     })
   }
